@@ -9,7 +9,7 @@ return {
       },
       condition = function(buf)
         -- exception: never autosave lua files
-        return vim.bo[buf].filetype ~= "lua"
+        return vim.bo[buf].filetype ~= "lua" and vim.bo[buf].filetype ~= "conf"
       end,
       -- Optional: skip autosave for certain buffers
       -- condition = function(buf)
